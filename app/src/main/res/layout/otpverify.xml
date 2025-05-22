@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical">
+
+
+
+                    <ImageView
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:scaleType="centerInside"
+                        android:background="@color/white"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:src="@drawable/mail"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OTP Verification "
+                        android:fontFamily="@font/font1"
+                        android:textColor="@color/color"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/_16ssp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Verify your email address"
+                        android:fontFamily="@font/font2"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/_12ssp"
+                        />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/ThemeOverlay.Material3.AutoCompleteTextView"
+                        android:hint="6-digit OTP"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        app:endIconMode="clear_text"
+                        android:textColorHint="#625E5E"
+                        app:boxBackgroundColor="#FAFAFA"
+                        app:startIconDrawable="@drawable/password"
+                        app:startIconTint="@color/color"
+                        app:boxCornerRadiusTopStart="8dp"
+                        app:boxCornerRadiusTopEnd="8dp"
+                        app:boxCornerRadiusBottomStart="8dp"
+                        app:boxCornerRadiusBottomEnd="8dp"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/otp_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:textColor="@color/color"
+                            android:textSize="@dimen/_12ssp" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/resent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:fontFamily="@font/font2"
+                        android:text="Resent mail"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/_12ssp"
+                        android:padding="@dimen/_5sdp"
+                        android:clickable="true"
+                        android:textStyle="bold" />
+
+
+
+                    <Button
+                        android:id="@+id/otp_verify"
+                        android:text="Verify E-mail"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/color"
+                        android:textSize="@dimen/_14ssp"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:textColor="#fff"/>
+
+
+                </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

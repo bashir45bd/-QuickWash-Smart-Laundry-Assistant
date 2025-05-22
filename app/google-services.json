@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "85898255538",
+    "project_id": "quickwash-d9074",
+    "storage_bucket": "quickwash-d9074.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85898255538:android:47d11ba920bad914d23dab",
+        "android_client_info": {
+          "package_name": "com.laundrigohub.quickwash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsyhZB4KlU0ZczQ6QpNoLbA501K5akLX4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

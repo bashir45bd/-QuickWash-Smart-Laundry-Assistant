@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.QuickWash" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <item name="colorPrimary">@color/color</item>
+
+    </style>
+
+    <style name="TabLayoutStyle2" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:background">@color/color</item>
+    </style>
+
+    <style name="CustomRatingBar" parent="Theme.MaterialComponents.Light">
+        <item name="colorControlActivated">#ff8383</item>
+    </style>
+
+</resources>

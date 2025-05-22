@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/home_tab"
+        android:icon="@drawable/home"
+        android:title="Home"
+        />
+    <item
+        android:id="@+id/order_tab"
+        android:icon="@drawable/order"
+        android:title="Orders"/>
+
+    <item
+        android:id="@+id/reviews"
+        android:icon="@drawable/reviews_24"
+        android:title="Reviews"/>
+
+    <item
+        android:id="@+id/profile_tab"
+        android:icon="@drawable/account_box_24"
+        android:title="Profile"/>
+
+
+
+</menu>

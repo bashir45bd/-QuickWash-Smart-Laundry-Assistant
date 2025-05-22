@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".WashFold">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/wash_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_above="@+id/payment_summary"
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/no_data"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:lottie_rawRes="@raw/nodata"
+            android:visibility="visible"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/payment_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="@dimen/_10sdp"
+            android:layout_alignParentBottom="true"
+            android:elevation="8dp"
+            android:visibility="gone"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:elevation="@dimen/_5sdp"
+                android:layout_margin="@dimen/_4sdp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:id="@+id/d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Payment Summary"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15ssp"
+                            android:fontFamily="@font/roboto"
+                            android:gravity="start" />
+
+                        <TextView
+                            android:id="@+id/total_items"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Items (0)"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textStyle="bold"
+                            android:gravity="start" />
+
+                        <TextView
+                            android:id="@+id/delivery_fee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Delivery Fee Free"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_12ssp"
+                            android:gravity="start" />
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            app:cardCornerRadius="@dimen/_20sdp"
+                            >
+                            <TextView
+                                android:id="@+id/total_price"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Total: 0 BDT"
+                                android:fontFamily="@font/roboto"
+                                android:background="@color/color"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:paddingRight="@dimen/_10sdp"
+                                android:paddingBottom="@dimen/_6sdp"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <Button
+                android:id="@+id/order_now"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:text="Order Now"
+                android:fontFamily="@font/font"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/color"
+                android:textStyle="bold"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+              />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

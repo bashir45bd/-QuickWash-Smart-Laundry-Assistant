@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:gravity="center"
+        >
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_180sdp"
+            app:lottie_rawRes="@raw/order_submit"
+            app:lottie_autoPlay="true"
+            android:layout_gravity="center"
+            app:lottie_loop="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Awesome!"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold"
+            android:textColor="@color/color"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your order hase been confirmed.\ncheck your email for more details."
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+        <Button
+            android:id="@+id/close"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:text="Start exploring"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:clickable="true"
+            android:fontFamily="@font/roboto"
+            android:textStyle="bold"
+            android:foreground="?attr/selectableItemBackground"
+            />
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

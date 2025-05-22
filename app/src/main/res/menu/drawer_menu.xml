@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item android:title="">
+
+            <menu>
+
+
+<!--                <item-->
+<!--                    android:id="@+id/dev"-->
+<!--                    android:icon="@drawable/person"-->
+<!--                    android:title="Developer"-->
+<!--                    />-->
+
+                <item
+                    android:id="@+id/shareapp"
+                    android:icon="@drawable/share_24"
+                    android:title="Share App"
+                    />
+
+                <item
+                    android:id="@+id/rateapp"
+                    android:icon="@drawable/rate_24"
+                    android:title="Rate App"
+                    />
+            </menu>
+
+        </item>
+
+    </group>
+
+
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single">
+        <item android:title="More">
+
+            <menu>
+                <item
+                    android:id="@+id/policy"
+                    android:icon="@drawable/police_24"
+                    android:title="Privacy Policy"
+                    />
+
+                <item
+                    android:id="@+id/more"
+                    android:icon="@drawable/more"
+                    android:title="More App"
+                    />
+
+                <item
+                    android:id="@+id/logout"
+                    android:icon="@drawable/logout_24"
+                    android:title="Logout"
+                    />
+            </menu>
+
+        </item>
+
+    </group>
+
+</menu>
