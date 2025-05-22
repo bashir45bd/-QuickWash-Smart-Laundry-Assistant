@@ -35,9 +35,9 @@ Configure db.php with your database credentials.
 - ## 📸 UI Screenshots
 
 <p float="left">
-  <img src="https://github.com/user-attachments/assets/bf063db0-e5d2-4adb-8484-747c53b59264" width="30%" />
-  <img src="https://github.com/user-attachments/assets/30ef2746-59f9-42a9-8968-d400ca445d5d" width="30%" />
   <img src="https://github.com/user-attachments/assets/d21155ff-a2ec-42c5-8b15-111f86c06d7d" width="30%" />
+  <img src="https://github.com/user-attachments/assets/30ef2746-59f9-42a9-8968-d400ca445d5d" width="30%" />
+  <img src="https://github.com/user-attachments/assets/bf063db0-e5d2-4adb-8484-747c53b59264" width="30%" />
 </p>
 <p float="left">
   <img src="https://github.com/user-attachments/assets/01f441e2-4500-46c9-8f9c-c5f1df13a085" width="30%" />
@@ -50,14 +50,7 @@ Configure db.php with your database credentials.
   <img src="https://github.com/user-attachments/assets/82306540-f5d6-4302-a733-06a148a040cd" width="30%" />
 </p>
 
-
-![Apple iPhone 16 Pro Max Screenshot 2]()
-![Apple iPhone 16 Pro Max Screenshot 1]()
-![Apple iPhone 16 Prhgho Max Screenshot 1]()
-![fd]()
-![f]()
-![Apple iPhone 16 Pro Max Screenshot 7]()
-![Apple iPhone 16 Pro Max Screenshot 6]()
-![Apple iPhone 16 Pro Max Screenshot 5]()
-![Apple iPhone 16 Pro Max Screenshot 4](https://github.com/user-attachments/assets/b12b797d-ab65-4feb-a0c1-93ad28034574)
-![Apple iPhone 16 Pro Max Screenshot 3](https://github.com/user-attachments/assets/a188f48d-4f9a-4baf-bc7d-96701d032d51)
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/b12b797d-ab65-4feb-a0c1-93ad28034574" width="30%" />
+  <img src="https://github.com/user-attachments/assets/a188f48d-4f9a-4baf-bc7d-96701d032d51" width="30%" />
+</p>
