@@ -36,7 +36,7 @@ Configure db.php with your database credentials.
 
 <p float="left">
   <img src="https://github.com/user-attachments/assets/d21155ff-a2ec-42c5-8b15-111f86c06d7d" width="30%" />
-  <img src="https://github.com/user-attachments/assets/30ef2746-59f9-42a9-8968-d400ca445d5d" width="30%" />
+  <img src="https://github.com/user-attachments/assets/a188f48d-4f9a-4baf-bc7d-96701d032d51" width="30%" />
   <img src="https://github.com/user-attachments/assets/bf063db0-e5d2-4adb-8484-747c53b59264" width="30%" />
 </p>
 <p float="left">
@@ -52,5 +52,4 @@ Configure db.php with your database credentials.
 
 <p float="left">
   <img src="https://github.com/user-attachments/assets/b12b797d-ab65-4feb-a0c1-93ad28034574" width="30%" />
-  <img src="https://github.com/user-attachments/assets/a188f48d-4f9a-4baf-bc7d-96701d032d51" width="30%" />
 </p>
