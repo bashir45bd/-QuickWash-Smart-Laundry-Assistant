@@ -49,3 +49,8 @@ Configure db.php with your database credentials.
   <img src="https://github.com/user-attachments/assets/61f72094-4185-44d2-8035-30fed12da8b5" width="30%" />
   <img src="https://github.com/user-attachments/assets/82306540-f5d6-4302-a733-06a148a040cd" width="30%" />
 </p>
+
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/f09212ab-9f5a-4c08-ac48-5ebe5318e644" width="30%" />
+  <img src="https://github.com/user-attachments/assets/d45b8ec6-e2ae-41c7-9191-bdd29161902c" width="30%" />
+</p>
