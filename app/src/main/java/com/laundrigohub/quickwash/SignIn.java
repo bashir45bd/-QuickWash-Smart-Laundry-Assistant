@@ -109,7 +109,7 @@ public class SignIn extends AppCompatActivity {
     }
     private void setForgetpass(String mail) {
 
-        String url = "http://192.168.1.104/Laundry/userInfo/forgetpass.php";
+        String url = "http://192.168.0.106/Laundry/userInfo/forgetpass.php";
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
 
@@ -164,7 +164,7 @@ public class SignIn extends AppCompatActivity {
 
 
     private void LoginRequest(String mail, String pass) {
-        String url = "http://192.168.1.104/Laundry/userInfo/login.php";
+        String url = "http://192.168.0.106/Laundry/userInfo/login.php";
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
 
@@ -181,6 +181,7 @@ public class SignIn extends AppCompatActivity {
                         String[] parts = response.split("\\|");
                         if (parts.length > 1) {
                             String userId = parts[1].trim();
+
 
                             SharedPreferences sharedPreferences = getSharedPreferences("Laundry", MODE_PRIVATE);
                             SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -233,7 +234,7 @@ public class SignIn extends AppCompatActivity {
     }
 
     private void sendTokenToServer(String userId, String token) {
-        String url = "http://192.168.1.104/Laundry/userInfo/update_fcm_token.php";
+        String url = "http://192.168.0.106/Laundry/userInfo/update_fcm_token.php";
 
         StringRequest request = new StringRequest(Request.Method.POST, url,
                 response -> Log.d("FCM", "Token updated: " + response),

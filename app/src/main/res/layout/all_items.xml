@@ -4,13 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/_3sdp"
     android:layout_marginTop="@dimen/_5sdp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_7sdp"
         android:layout_margin="@dimen/_3sdp"
         >
 
@@ -20,7 +19,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:padding="@dimen/_8sdp"
+            android:padding="@dimen/_10sdp"
             android:background="@color/white">
 
             <!-- Checkbox for selection -->
@@ -42,11 +41,11 @@
                     android:id="@+id/item_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="DryCleaning"
                     android:fontFamily="@font/roboto"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/_16ssp"
-                    />
+                    android:textStyle="bold"
+                    android:text="DryCleaning"
+                    android:textColor="#161616"
+                    android:textSize="@dimen/_14ssp" />
 
                 <TextView
                     android:id="@+id/price"
@@ -54,8 +53,8 @@
                     android:layout_height="wrap_content"
                     android:text="56 BDT"
                     android:fontFamily="@font/font2"
-                    android:textColor="@color/color"
-                    android:textSize="@dimen/_14ssp"
+                    android:textColor="#282828"
+                    android:textSize="@dimen/_12ssp"
                     android:textStyle="bold"
                     />
             </LinearLayout>
@@ -69,8 +68,8 @@
 
                 <ImageButton
                     android:id="@+id/btn_minus"
-                    android:layout_width="@dimen/_28sdp"
-                    android:layout_height="@dimen/_28sdp"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
                     android:background="@drawable/rounded_button"
                     android:src="@drawable/sub"
                     android:contentDescription="Minus"
@@ -82,13 +81,13 @@
                     android:layout_height="wrap_content"
                     android:text="1"
                     android:paddingHorizontal="@dimen/_8sdp"
-                    android:textSize="@dimen/_17ssp"
+                    android:textSize="@dimen/_16ssp"
                     android:textColor="@color/black" />
 
                 <ImageButton
                     android:id="@+id/btn_plus"
-                    android:layout_width="@dimen/_30sdp"
-                    android:layout_height="@dimen/_30sdp"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
                     android:background="@drawable/rounded_button"
                     android:src="@drawable/outline_add_24"
                     android:contentDescription="Plus"

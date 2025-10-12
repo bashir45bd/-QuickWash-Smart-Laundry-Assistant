@@ -8,6 +8,7 @@
     android:background="@color/bg"
     tools:context=".CheckoutActivity">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,10 +24,10 @@
 
             <ImageView
                 android:id="@+id/Checkout_back"
-                android:layout_width="@dimen/_43sdp"
+                android:layout_width="@dimen/_40sdp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:padding="@dimen/_8sdp"
+                android:padding="@dimen/_10sdp"
                 android:layout_marginLeft="@dimen/_5sdp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
@@ -38,10 +39,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:fontFamily="@font/roboto"
+                android:fontFamily="@font/inter18"
                 android:text="Buy Now"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_17ssp"
+                android:textSize="@dimen/_15ssp"
                 android:textStyle="bold" />
 
 
@@ -59,7 +60,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@android:color/white"
-                android:padding="@dimen/_10sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_250sdp"
                 >
 
                 <androidx.cardview.widget.CardView
@@ -276,11 +278,11 @@
                         <Button
                             android:id="@+id/Promo_btn"
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/_50sdp"
+                            android:layout_height="@dimen/_40sdp"
                             android:text="Apply"
                             android:layout_marginTop="@dimen/_1sdp"
                             android:layout_marginLeft="@dimen/_20sdp"
-                            android:textSize="@dimen/_16ssp"
+                            android:textSize="@dimen/_14ssp"
                             android:fontFamily="@font/font2"
                             android:textColor="@android:color/white"
                             android:backgroundTint="@color/color"
@@ -353,6 +355,28 @@
 
 
                 </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView"
+                    android:hint="E-mail"
+                    android:textColorHint="#625E5E"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="30"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/_12ssp" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
@@ -369,7 +393,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/address"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_80sdp"
+                        android:layout_height="@dimen/_60sdp"
                         android:inputType="textMultiLine"
                         android:maxLength="40"
                         android:gravity="start"
@@ -379,6 +403,34 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+
+                <TextView
+                    android:id="@+id/pickupDateTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:background="@drawable/rounded_light_gray"
+                    android:text="Select Pickup Date Time"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/deliveryDateTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:background="@drawable/rounded_light_gray"
+                    android:text="Select Delivery Date Time"
+                    android:textColor="@android:color/black"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="8dp"/>
+
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -387,7 +439,7 @@
                     android:textSize="@dimen/_15ssp"
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_20sdp"
-                    android:fontFamily="@font/roboto"
+                    android:fontFamily="@font/inter18"
                     android:gravity="start" />
 
                 <LinearLayout
@@ -395,6 +447,10 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_marginLeft="@dimen/_10sdp"
+                    android:background="@drawable/rounded_light_gray"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
                     >
                     <TextView
                         android:layout_width="wrap_content"
@@ -409,12 +465,14 @@
                         android:layout_height="wrap_content"
                         >
                         <!-- Checkbox for selection -->
+
                         <CheckBox
                             android:id="@+id/cash_checkbox"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:buttonTint="@color/color" />
+                            android:button="@drawable/custom_checkbox"
+                            android:textColor="@android:color/black"
+                            android:layout_alignParentEnd="true" />
 
                     </RelativeLayout>
 
@@ -423,19 +481,33 @@
 
 
                 <Button
-                    android:id="@+id/submit_order"
+                    android:id="@+id/Pay_now"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_45sdp"
-                    android:text="Submit Order"
-                    android:textSize="@dimen/_16ssp"
-                    android:fontFamily="@font/font"
-                    android:textColor="@android:color/white"
+                    android:layout_height="48dp"
+                    android:text="Pay Now"
                     android:backgroundTint="@color/color"
-                    android:gravity="center"
+                    android:textColor="@android:color/white"
                     android:textStyle="bold"
-                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
                     android:layout_marginRight="@dimen/_10sdp"
-                    android:layout_marginTop="25dp" />
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginBottom="12dp"
+                    android:visibility="visible"
+                    />
+
+                <Button
+                    android:id="@+id/Order_now"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Order Now"
+                    android:backgroundTint="@color/color"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:visibility="gone"
+                  />
 
 
 

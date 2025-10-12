@@ -144,7 +144,7 @@
                 android:id="@+id/order_now"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_45sdp"
-                android:text="Order Now"
+                android:text="Submit"
                 android:fontFamily="@font/font"
                 android:textSize="@dimen/_14ssp"
                 android:textColor="@android:color/white"

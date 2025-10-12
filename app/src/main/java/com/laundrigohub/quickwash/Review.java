@@ -70,7 +70,7 @@ public class Review extends AppCompatActivity {
     }
 
     private void fetchReview() {
-        String url = "http://192.168.1.104/Laundry/Admin%20panel/get_review.php?order_id=" + orderId + "&user_id=" + userId;
+        String url = "http://192.168.0.106/Laundry/userInfo/get_review.php?order_id=" + orderId + "&user_id=" + userId;
 
         StringRequest request = new StringRequest(Request.Method.GET, url,
                 response -> {
@@ -110,7 +110,7 @@ public class Review extends AppCompatActivity {
     }
 
     private void submitReview() {
-        String url = "http://192.168.1.104/Laundry/Admin%20panel/submit_review.php";
+        String url = "http://192.168.0.106/Laundry/userInfo/submit_review.php";
         float rating = ratingBar.getRating();
         String comment = commentEditText.getText().toString();
 
@@ -153,7 +153,7 @@ public class Review extends AppCompatActivity {
 
 
     private void updateReview() {
-        String url = "http://192.168.1.104/Laundry/Admin%20panel/update_review.php";
+        String url = "http://192.168.0.106/Laundry/userInfo/update_review.php";
         float rating = ratingBar.getRating();
         String comment = commentEditText.getText().toString();
 
@@ -178,7 +178,7 @@ public class Review extends AppCompatActivity {
     }
 
     private void deleteReview() {
-        String url = "http://192.168.1.104/Laundry/Admin%20panel/delete_review.php";
+        String url = "http://192.168.0.106/Laundry/userInfo/delete_review.php";
 
         StringRequest request = new StringRequest(Request.Method.POST, url,
                 response -> {

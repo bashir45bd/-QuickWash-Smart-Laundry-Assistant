@@ -103,7 +103,7 @@ public class WashIron extends Fragment {
     }
 
     private void wash_get() {
-        String url = "http://192.168.1.104/Laundry/userInfo/get_wash.php";
+        String url = "http://192.168.0.106/Laundry/userInfo/get_wash.php";
 
         JSONObject jsonRequest = new JSONObject();
         try {

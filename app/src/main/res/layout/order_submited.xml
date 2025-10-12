@@ -36,7 +36,7 @@
             android:text="Your order hase been confirmed.\ncheck your email for more details."
             android:textSize="@dimen/_15ssp"
             android:textColor="@color/black"
-            android:fontFamily="@font/roboto"
+            android:fontFamily="@font/inter18"
             android:layout_marginTop="@dimen/_5sdp"/>
 
         <Button

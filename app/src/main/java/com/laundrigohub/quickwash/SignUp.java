@@ -5,15 +5,10 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +20,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
@@ -152,7 +146,7 @@ public class SignUp extends AppCompatActivity {
 
     private void signup_Request(String name, String email, String pass) {
 
-        String url = "http://192.168.1.104/Laundry/userInfo/signUp.php";
+        String url = "http://192.168.0.106/Laundry/userInfo/signUp.php";
         RequestQueue requestQueue = Volley.newRequestQueue(this);
 
         ProgressDialog progressDialog = new ProgressDialog(SignUp.this);
@@ -215,7 +209,7 @@ public class SignUp extends AppCompatActivity {
 
 
     private void verifyOtpAndReset(String email, String otp, String password) {
-        String url = "http://192.168.1.104/Laundry/userInfo/forgetotpverify.php";
+        String url = "http://192.168.0.106/Laundry/userInfo/forgetotpverify.php";
 
         StringRequest request = new StringRequest(Request.Method.POST, url,
                 response -> {
@@ -296,7 +290,7 @@ public class SignUp extends AppCompatActivity {
     }
 
     private void verifyloginotp(String email, String otp) {
-        String url = "http://192.168.1.104/Laundry/userInfo/otpchecker.php";
+        String url = "http://192.168.0.106/Laundry/userInfo/otpchecker.php";
 
         ProgressDialog progressDialog = new ProgressDialog(SignUp.this);
         progressDialog.setMessage("Loading...");
@@ -342,7 +336,7 @@ public class SignUp extends AppCompatActivity {
     }
 
     private void resentotp(String email) {
-        String url = "http://192.168.1.104/Laundry/userInfo/resentotpforlogin.php";
+        String url = "http://192.168.0.106/Laundry/userInfo/resentotpforlogin.php";
 
         ProgressDialog progressDialog = new ProgressDialog(SignUp.this);
         progressDialog.setMessage("Loading...");
@@ -382,9 +376,6 @@ public class SignUp extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(SignUp.this);
         queue.add(request);
     }
-
-
-
 
 
 

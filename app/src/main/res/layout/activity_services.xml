@@ -23,10 +23,10 @@
 
             <ImageView
                 android:id="@+id/services_back"
-                android:layout_width="@dimen/_43sdp"
+                android:layout_width="@dimen/_40sdp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:padding="@dimen/_8sdp"
+                android:padding="@dimen/_10sdp"
                 android:layout_marginLeft="@dimen/_5sdp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
@@ -38,10 +38,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:fontFamily="@font/roboto"
+                android:fontFamily="@font/inter18"
                 android:text="Services"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_17ssp"
+                android:textSize="@dimen/_15ssp"
                 android:textStyle="bold" />
 
 

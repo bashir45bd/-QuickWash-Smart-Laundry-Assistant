@@ -11,11 +11,11 @@
             <menu>
 
 
-<!--                <item-->
-<!--                    android:id="@+id/dev"-->
-<!--                    android:icon="@drawable/person"-->
-<!--                    android:title="Developer"-->
-<!--                    />-->
+                <item
+                    android:id="@+id/dev"
+                    android:icon="@drawable/person_24"
+                    android:title="Developer"
+                    />
 
                 <item
                     android:id="@+id/shareapp"

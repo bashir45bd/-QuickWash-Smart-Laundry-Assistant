@@ -28,7 +28,7 @@
                 android:layout_gravity="center"
                 android:gravity="start"
                 android:orientation="horizontal"
-                android:background="#feb8b8"
+                android:background="@color/color"
                 >
 
                 <LinearLayout
@@ -43,7 +43,7 @@
                         android:layout_gravity="start"
                         android:text="Dry\nCleaning"
                         android:fontFamily="@font/roboto"
-                        android:textColor="@color/black"
+                        android:textColor="#EFEFEF"
                         android:textSize="@dimen/_13ssp"
                         android:paddingLeft="@dimen/_7sdp"
                         android:layout_marginTop="@dimen/_5sdp"
@@ -63,6 +63,7 @@
                             android:layout_gravity="start"
                             android:layout_alignParentBottom="true"
                             android:scaleType="centerCrop"
+                            android:tint="@color/white"
                             android:src="@drawable/next" />
 
                     </RelativeLayout>

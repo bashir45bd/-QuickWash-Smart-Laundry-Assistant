@@ -56,7 +56,7 @@ public class MyReviewsActivity extends AppCompatActivity {
     }
 
     private void fetchReviews() {
-        String url = "http://192.168.1.104/Laundry/userInfo/get_reviews_by_user.php"; // Replace with real IP or domain
+        String url = "http://192.168.0.106/Laundry/userInfo/get_reviews_by_user.php"; // Replace with real IP or domain
 
         StringRequest request = new StringRequest(Request.Method.GET, url,
                 response -> {

@@ -28,22 +28,22 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
         switch (position) {
             case 0:
                 fragment = new WashFold();
-                service_id = "13";
+                service_id = "1";
                 cat_id = catId;
                 break;
             case 1:
                 fragment = new WashIron();
-                service_id = "12";
+                service_id = "2";
                 cat_id = catId;
                 break;
             case 2:
                 fragment = new SteamIroning();
-                service_id = "11";
+                service_id = "3";
                 cat_id = catId;
                 break;
             default:
                 fragment = new DryCleaning();
-                service_id = "10";
+                service_id = "4";
                 cat_id = catId;
                 break;
         }
