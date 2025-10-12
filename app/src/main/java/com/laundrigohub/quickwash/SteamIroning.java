@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,6 +27,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -72,7 +74,8 @@ public class SteamIroning extends Fragment {
             total_items.setText("Total items: " + itemCount);
         });
 
-        wash_list.setLayoutManager(new LinearLayoutManager(getContext()));
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
+        wash_list.setLayoutManager(gridLayoutManager);
         wash_list.setAdapter(adapter);
 
         wash_get();
@@ -130,6 +133,11 @@ public class SteamIroning extends Fragment {
                                 item.put("id", object.getString("id"));
                                 item.put("name", object.getString("name"));
                                 item.put("price", object.getString("price"));
+
+                                // New fields
+                                item.put("subtitle", object.has("subtitle") ? object.getString("subtitle") : "");
+                                item.put("image", object.has("image") && !object.isNull("image") ? object.getString("image") : "");
+
                                 wash_array.add(item);
                             }
 
@@ -156,6 +164,7 @@ public class SteamIroning extends Fragment {
         requestQueue.add(jsonObjectRequest);
     }
 
+
     public interface OnSelectionChangedListener {
         void onSelectionChanged(double totalAmount, int totalItems);
     }
@@ -163,18 +172,18 @@ public class SteamIroning extends Fragment {
     private class Adapter extends RecyclerView.Adapter<Adapter.viewholder> {
 
         // Define the background colors
-        private final int[] colors = {
-                Color.parseColor("#FB84AB"),
-                Color.parseColor("#9cf2d5"),
-                Color.parseColor("#f4e878"),
-                Color.parseColor("#fabfff"),
-                Color.parseColor("#feb8b8")
-        };
+//        private final int[] colors = {
+//                Color.parseColor("#FB84AB"),
+//                Color.parseColor("#9cf2d5"),
+//                Color.parseColor("#f4e878"),
+//                Color.parseColor("#fabfff"),
+//                Color.parseColor("#feb8b8")
+//        };
 
         private ArrayList<HashMap<String, String>> wash_array;
         private HashMap<Integer, Integer> quantityMap = new HashMap<>();
         private HashSet<Integer> selectedItems = new HashSet<>();
-        private WashFold.OnSelectionChangedListener listener;
+        private OnSelectionChangedListener listener;
 
         public Adapter(ArrayList<HashMap<String, String>> wash_array) {
             this.wash_array = wash_array;
@@ -188,14 +197,14 @@ public class SteamIroning extends Fragment {
             }
         }
 
-        public void setOnSelectionChangedListener(WashFold.OnSelectionChangedListener listener) {
+        public void setOnSelectionChangedListener(OnSelectionChangedListener listener) {
             this.listener = listener;
         }
 
         private class viewholder extends RecyclerView.ViewHolder {
-            ImageView cat_pic;
+            ImageView item_pic;
             LinearLayout items;
-            TextView price, name, quantityText;
+            TextView price, name, quantityText,subtitle;
             ImageButton btnPlus, btnMinus;
             CheckBox itemCheckbox;
 
@@ -203,12 +212,13 @@ public class SteamIroning extends Fragment {
                 super(itemView);
                 name = itemView.findViewById(R.id.item_name);
                 price = itemView.findViewById(R.id.price);
-                cat_pic = itemView.findViewById(R.id.cat_pic);
+                subtitle = itemView.findViewById(R.id.subtitle);
                 items = itemView.findViewById(R.id.items);
                 btnPlus = itemView.findViewById(R.id.btn_plus);
                 btnMinus = itemView.findViewById(R.id.btn_minus);
                 quantityText = itemView.findViewById(R.id.quantity_text);
                 itemCheckbox = itemView.findViewById(R.id.item_checkbox);
+                item_pic=itemView.findViewById(R.id.product_image);
             }
         }
 
@@ -216,7 +226,7 @@ public class SteamIroning extends Fragment {
         @Override
         public Adapter.viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.all_items, parent, false);
-            return new Adapter.viewholder(view);
+            return new viewholder(view);
         }
 
         @Override
@@ -224,16 +234,32 @@ public class SteamIroning extends Fragment {
             HashMap<String, String> item = wash_array.get(position);
             String name_s = item.get("name");
             String price_s = item.get("price");
+            String subtitle = item.get("subtitle");
+            String imageUrl = item.get("image");
 
             holder.name.setText(name_s);
-            holder.price.setText(price_s + " BDT");
+            holder.price.setText("৳"+price_s);
+            holder.subtitle.setText(subtitle);
+
+            // Load image with Picasso
+
+            if (imageUrl != null && !imageUrl.isEmpty()) {
+                Picasso.get()
+                        .load(imageUrl)
+                        .placeholder(R.drawable.profileavtar)
+                        .error(R.drawable.profileavtar)
+                        .into(holder.item_pic);
+            } else {
+                holder.item_pic.setImageResource(R.drawable.profileavtar);
+            }
+
 
             int quantity = quantityMap.getOrDefault(position, 1);
             holder.quantityText.setText(String.valueOf(quantity));
 
-            // Set background color in cycle
-            int color = colors[position % colors.length];
-            holder.itemCheckbox.setBackgroundColor(color);
+//            // Set background color in cycle
+////            int color = colors[position % colors.length];
+//            holder.itemCheckbox.setBackgroundColor(color);
 
             holder.itemCheckbox.setOnCheckedChangeListener(null);
             holder.itemCheckbox.setChecked(selectedItems.contains(position));

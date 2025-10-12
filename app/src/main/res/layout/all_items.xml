@@ -7,59 +7,78 @@
     android:layout_marginTop="@dimen/_5sdp">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/_7sdp"
-        android:layout_margin="@dimen/_3sdp"
-        >
+        app:cardCornerRadius="20dp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cardElevation="6dp">
 
+        <!-- Background Gradient -->
         <LinearLayout
-            android:id="@+id/items"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="@dimen/_10sdp"
-            android:background="@color/white">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:gravity="center"
+            android:background="@drawable/bg_gradient">
 
-            <!-- Checkbox for selection -->
-            <CheckBox
-                android:id="@+id/item_checkbox"
+            <!-- Product Title -->
+            <TextView
+                android:id="@+id/item_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:buttonTint="@color/black" />
+                android:text="MOOGLE"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:layout_marginBottom="8dp" />
 
-            <!-- Item name and price -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
+            <!-- Subtitle -->
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:text="Lorem ipsum dolor consectetur"
+                android:textColor="#FFE6E6E6"
+                android:textSize="12sp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center" />
 
-                <TextView
-                    android:id="@+id/item_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto"
-                    android:textStyle="bold"
-                    android:text="DryCleaning"
-                    android:textColor="#161616"
-                    android:textSize="@dimen/_14ssp" />
+            <!-- Product Image with Price Tag -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+
+                <ImageView
+                    android:id="@+id/product_image"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/done"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/image_circle_bg"
+                    android:padding="8dp" />
 
                 <TextView
                     android:id="@+id/price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="56 BDT"
-                    android:fontFamily="@font/font2"
-                    android:textColor="#282828"
-                    android:textSize="@dimen/_12ssp"
+                    android:text="$599"
+                    android:textColor="@android:color/black"
                     android:textStyle="bold"
-                    />
-            </LinearLayout>
+                    android:background="@drawable/price_bg"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:textSize="11sp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_margin="8dp" />
 
-            <!-- Quantity Selector -->
+
+            </FrameLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -73,7 +92,7 @@
                     android:background="@drawable/rounded_button"
                     android:src="@drawable/sub"
                     android:contentDescription="Minus"
-                    app:tint="@color/white" />
+                    app:tint="@color/black" />
 
                 <TextView
                     android:id="@+id/quantity_text"
@@ -82,7 +101,7 @@
                     android:text="1"
                     android:paddingHorizontal="@dimen/_8sdp"
                     android:textSize="@dimen/_16ssp"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/white" />
 
                 <ImageButton
                     android:id="@+id/btn_plus"
@@ -91,10 +110,52 @@
                     android:background="@drawable/rounded_button"
                     android:src="@drawable/outline_add_24"
                     android:contentDescription="Plus"
-                    app:tint="@color/white" />
+
+                    app:tint="@color/black" />
+
             </LinearLayout>
+
+            <!-- Shop Now Button -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/_3sdp"
+                >
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textStyle="normal"
+                   android:text="Select"
+                   android:fontFamily="sans-serif-medium"
+                   android:textColor="@color/white"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:layout_marginLeft="5dp"
+                   android:layout_marginRight="5dp"
+
+                   />
+
+                <CheckBox
+                    android:id="@+id/item_checkbox"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:button="@color/white"
+                    android:background="@drawable/checkbox_bg"
+                   />
+
+
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
 
 </RelativeLayout>
