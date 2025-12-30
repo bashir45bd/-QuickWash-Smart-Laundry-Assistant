@@ -1,36 +1,148 @@
-Showing all functionality: https://www.youtube.com/watch?v=ZzZWwA35Z04
+# 📱 QuickWash – User Android App
 
-QuickWash is a full-featured Android laundry service application built with Java and PHP. It enables users to schedule laundry pickups, choose services based on categories, apply promo codes, and track their orders in real-time.
+**QuickWash** is a user-friendly Android application designed to simplify laundry service booking.
+The app allows users to register, browse services, place laundry orders, apply promo codes, track order status, and submit reviews — all from a single mobile interface.
 
-📱 App Features
-🔐 Secure Login/Sign-Up (Email & Google)
-🧺 Category-based service selection
-📅 Schedule pickup & delivery
-💰 Transparent pricing with promo codes
-📦 Invoice generation & order tracking
-🔔 Real-time push notifications (FCM)
+This application works in integration with the **QuickWash Admin Panel** and backend APIs.
 
-🧰 Tech Stack
-Component	Technology
-Frontend (Mobile)	Android (Java + XML)
-Backend	PHP (REST API)
-Database	MySQL
-Networking	Volley (Android)
-Notifications	Firebase Cloud Messaging (FCM)
-Image Handling	Picasso (Android)
-Payment Gateway	SSLCommerz (optional)
+---
 
-🚀 How to Build and Run
-📦 Prerequisites
-Android Studio (Latest version)
-XAMPP or any PHP server (Apache + MySQL)
-Firebase project (for FCM)
+## 🚀 Features
 
-🔧 Backend Setup (PHP + MySQL)
-Clone or download the backend files (/backend folder).
-Place them in your XAMPP htdocs directory.
-Import the provided .sql file to your MySQL database (e.g., quickwash_db).
-Configure db.php with your database credentials.
+### 👤 User Authentication
+
+* User registration with email verification
+* Secure login & logout
+* Forgot password support
+
+### 🧺 Browse Laundry Services
+
+* View available services (Washing, Ironing, Dry Cleaning, etc.)
+* Browse categories and items
+* View item prices and details
+
+### 🛒 Order Placement
+
+* Add items to cart
+* Select pickup and delivery time
+* Enter address and contact details
+* Apply promo codes
+* Place orders easily
+
+### 💳 Payment System
+
+* Online payment integration
+* Transaction tracking
+* Payment status updates
+
+### 📦 Order Tracking
+
+* View order history
+* Track order status (Pending, Paid, Delivered)
+* Receive order notifications
+
+### ⭐ Reviews & Feedback
+
+* Submit ratings and reviews
+* View previous feedback
+
+### 🔔 Notifications
+
+* Order status updates
+* Payment confirmation alerts
+* Firebase Cloud Messaging (FCM) support
+
+### 👤 Profile Management
+
+* Update profile information
+* Upload profile image
+
+---
+
+## 🧑‍💻 Technologies Used
+
+### Frontend (Android)
+
+* Java
+* XML (Material Design UI)
+* RecyclerView
+* Volley (API communication)
+* ImagePicker
+* Firebase Cloud Messaging (FCM)
+
+### Backend
+
+* PHP (REST APIs)
+* MySQL Database
+
+### Tools
+
+* Android Studio
+* Git & GitHub
+
+---
+
+## 🔗 API Integration
+
+* RESTful APIs connected to the QuickWash backend
+* JSON-based request & response
+* Secure authentication & validation
+
+Key API modules:
+
+* Authentication (Login / Signup / Verification)
+* Services & Items
+* Orders & Order Items
+* Payments
+* Reviews
+* Promo Codes
+
+---
+
+## 🗄 Database Design
+
+* Relational MySQL database
+* Foreign key relationships
+* Designed using **ER Diagram and DFD**
+* Optimized for mobile performance
+
+---
+
+
+## 🔒 Security Features
+
+* Input validation
+* Secure API communication
+* Token-based user verification
+* Protected user sessions
+
+---
+
+## 📌 Project Purpose
+
+This Android app is developed for:
+
+* Real-world laundry service solution
+* Academic project submission
+* Learning Android + Backend integration
+* Demonstrating full-stack mobile development
+
+---
+
+## 📄 License
+
+This project is developed for **educational and learning purposes**.
+You are free to modify and enhance it.
+
+---
+
+## 👤 Author
+
+**Bashir Ahmed**
+Android & iOS App Developer
+
+📧 Email: *(bashir45.me@gmail.com)*
+
 
 - ## 📸 UI Screenshots
 
